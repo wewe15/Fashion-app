@@ -1,0 +1,16 @@
+<!-- templates/books/book_list.html -->
+{% extends '_base.html' %} {% block title %}Shop{% endblock title %}
+<!--This is content-->
+{% block content %}
+<!--Simple for loop for each product-->
+{% for product in products_list %}
+<div class="product-info">
+  <a href="{{ product.get_absolute_url }}">
+    <img class="img" src="{{ product.image.url}}" alt="{{ product.name }}" />
+  </a>
+  <h1>Name: {{ product.name }}</a></h1>
+  <p>Description: {{product.description}}</p>
+  <p>Price: {{product.price}}</p>
+  <p>Available: {{product.available}}</p>
+</div>
+{% endfor %} {% endblock content %}

@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     #local
     'users',
     'pages',
+    'shop',
 ]
 
 MIDDLEWARE = [

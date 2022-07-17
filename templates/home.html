@@ -4,11 +4,14 @@
 {% block title %}Home{% endblock title %}
 <!--This is content-->
 {% block content %}
-<h1>Homepage</h1>
-{% if user.is_authenticated %} Hi {{ user.email }}!
-<p><a href="{% url 'logout' %}">Log Out</a></p>
-{% else %}
-<p>You are not logged in</p>
-<a href="{% url 'login' %}">Log In</a>
-<a href="{% url 'signup' %}">Sign Up</a>
-{% endif %} {% endblock content %}
+<form class="form" action="{% url 'search_result' %}" method="get">
+  <input
+    name="q"
+    class="form-control mr-sm-2"
+    type="text"
+    placeholder="Search"
+    aria-label="Search"
+  />
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+{% endblock content %}

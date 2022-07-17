@@ -115,3 +115,38 @@ html {
   color: whitesmoke;
 }
 /* end form */
+/* start product */
+.product-info {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 200px;
+  margin: 16px;
+  float: left;
+  color: black;
+}
+
+.product-info h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+
+.product-info p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.product-info img {
+  border-radius: 50%;
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-info img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+/* end product */

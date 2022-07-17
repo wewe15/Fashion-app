@@ -1,0 +1,15 @@
+<!-- templates/books/book_detail.html -->
+{% extends '_base.html' %}
+<!---->
+{% block title %}{{ product.title }} {% endblock title%}
+<!--This is content-->
+{% block content %}
+<div class="product-info">
+  {% if product.image %}
+  <img src="{{ product.image.url}}" alt="{{ product.name }}" />
+  {% endif %}
+  <h1>Name: {{ product.name }}</h1>
+  <p>description: {{ product.description}}</p>
+  <p>Price: {{ product.price }}</p>
+</div>
+{% endblock content %}
