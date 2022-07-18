@@ -9,8 +9,13 @@ class ProductListView(LoginRequiredMixin, ListView):
     model = Product
     context_object_name = "products_list" 
     template_name = "products/product_list.html"
-    login_url = 'login' 
+    login_url = 'login'
 
+    def get_queryset(self):
+        category = self.kwargs.get('category')
+        if category:
+            return Product.objects.filter(category=category) 
+        return Product.objects.all()
 
 class ProductDetailView(LoginRequiredMixin, DetailView): 
     model = Product

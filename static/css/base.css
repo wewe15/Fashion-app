@@ -132,6 +132,15 @@ html {
   margin-bottom: 6px;
 }
 
+.product-info a {
+  text-decoration: none;
+  color: black;
+}
+
+.product-info a:hover {
+  color: tomato;
+}
+
 .product-info p {
   font-size: 1.1em;
   margin-bottom: 10px;

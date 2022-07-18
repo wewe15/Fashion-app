@@ -8,7 +8,9 @@
   <a href="{{ product.get_absolute_url }}">
     <img class="img" src="{{ product.image.url}}" alt="{{ product.name }}" />
   </a>
-  <h1>Name: {{ product.name }}</a></h1>
+  <a href="{{ product.category.get_absolute_url }}">
+    <h1>Category: {{ product.category }}</h1>
+  </a>
   <p>Description: {{product.description}}</p>
   <p>Price: {{product.price}}</p>
   <p>Available: {{product.available}}</p>
