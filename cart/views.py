@@ -9,6 +9,7 @@ from .forms import CartAddProductForm
 
 class CartAddView(ListView):
     model = Product
+
     def post(self, request, product_id):
         cart = Cart(request)
         product = get_object_or_404(Product, id=product_id)
@@ -23,6 +24,7 @@ class CartAddView(ListView):
 
 class CartRemoveView(ListView):
     model = Product
+
     def post(self, request, product_id):
         cart = Cart(request)
         product = get_object_or_404(Product, id=product_id)
@@ -32,6 +34,7 @@ class CartRemoveView(ListView):
 
 class CartDetailView(ListView):
     model = Product
+
     def get(self, request):
         cart = Cart(request)
         for item in cart:
