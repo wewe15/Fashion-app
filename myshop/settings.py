@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'users',
     'pages',
     'shop',
+    'cart',
 ]
 
 MIDDLEWARE = [
@@ -145,4 +146,6 @@ LOGOUT_REDIRECT_URL = 'home'
 
 
 MEDIA_URL = '/media/' 
-MEDIA_ROOT = str(BASE_DIR.joinpath('media')) 
+MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
+
+CART_SESSION_ID = 'cart'

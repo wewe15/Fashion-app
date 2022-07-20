@@ -14,5 +14,10 @@
   <p>Name: {{ product.name }}</p>
   <p>description: {{ product.description}}</p>
   <p>Price: {{ product.price }}</p>
+  <form action="{% url "cart:cart_add" product.id %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Add to cart">
+  </form>
 </div>
 {% endblock content %}

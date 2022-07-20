@@ -158,4 +158,104 @@ html {
 .product-info img:hover {
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
+
+.product-info  select {
+  border: none;
+  outline: none;
+  font-size: 1em;
+  text-align: center;
+  width: 33%;
+}
+
+.product-info input {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  margin: 10px auto 10px auto;
+  font-size: 1.2em;
+}
+
+.product-info input:hover {
+  background: tomato;
+  cursor: pointer;
+}
+
 /* end product */
+/* start cart */
+.header{
+  text-align: center;
+}
+.cart-header{
+  text-align: center;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  margin: 10px;
+}
+
+.cart{
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  margin: 16px;
+  width: 98%;
+  color: black;
+}
+
+.cart img {
+  border-radius: 50%;
+  height: 150px;
+  object-fit: cover;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  text-align: left;
+  font-size: .9rem;
+  padding: 10px;
+  margin: 0;
+}
+
+.total {
+  font-weight: bold;
+}
+
+td input[type="submit"] {
+  border: none;
+  padding: 4px;
+  margin: 10px auto 10px auto;
+  font-size: 1.2em;
+  background-color: whitesmoke;
+}
+
+td input[type="submit"]:hover {
+  background: tomato;
+  cursor: pointer;
+}
+/* end cart */
+/* button cart */
+.text-right{
+  text-align: right;
+}
+
+.text-right a {
+  color: #fff;
+  background: #f5ba13;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 14px;
+  text-decoration: none;
+  margin-right: 8px
+}
+
+.text-right a:hover {
+  background: tomato;
+}
