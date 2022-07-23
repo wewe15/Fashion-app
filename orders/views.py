@@ -1,11 +1,10 @@
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 from django.contrib.auth.mixins import LoginRequiredMixin 
 from django.views import generic
 
 from .forms import OrderCreateForm
 from .models import OrderItem
 from cart.cart import Cart
-
 
 
 class OrderCreateView(LoginRequiredMixin, generic.CreateView):
@@ -25,5 +24,4 @@ class OrderCreateView(LoginRequiredMixin, generic.CreateView):
                 quantity=item['quantity']
             )
         cart.clear()
-        return redirect('home')
-    
+        return render(request, "orders/created.html", {"order": order})
